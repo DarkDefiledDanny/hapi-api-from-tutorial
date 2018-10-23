@@ -1,0 +1,13 @@
+# Ignore properties
+.env
+
+
+# Ignore Node Modules
+node_modules/
+
+# Ignore keys
+*.key
+*.pem
+
+# Ignore Build Files
+# dist/

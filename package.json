@@ -1,0 +1,49 @@
+{
+  "name": "hapi-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js --exec babel-node",
+    "flow": "flow",
+    "prettier": "prettier --single-quote --write \"src/**/*.js\"",
+    "test": "mocha ./src/**/*.spec.js --require babel-register --require babel-polyfill",
+    "precommit": "lint-staged",
+    "build": "babel src --out-dir dist --ignore spec.js",
+    "start": "npm run build && node ./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "flow-bin": "^0.83.0",
+    "flow-typed": "^2.5.1",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "prettier": "1.14.3"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "bcrypt": "^3.0.2",
+    "console-stamp": "^0.2.7",
+    "dotenv": "^6.1.0",
+    "hapi": "^17.6.0",
+    "hapi-auth-bearer-token": "^6.1.0",
+    "hapi-auth-jwt2": "^8.1.0",
+    "hapi-swagger": "^9.1.2",
+    "husky": "^1.1.2",
+    "inert": "^5.1.0",
+    "jsonwebtoken": "^8.3.0",
+    "lint-staged": "^7.3.0",
+    "mongoose": "^5.3.4",
+    "shortid": "^2.2.13",
+    "uuid": "^3.3.2",
+    "vision": "^5.4.0"
+  }
+}
