@@ -10,4 +10,4 @@ node_modules/
 *.pem
 
 # Ignore Build Files
-# dist/
+dist/
