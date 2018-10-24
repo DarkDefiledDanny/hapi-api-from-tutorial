@@ -1,5 +1,6 @@
 /* @flow */
 import 'babel-polyfill';
+const MongoClient = require('mongodb').MongoClient;
 import Hapi from 'hapi';
 import mongoose from 'mongoose';
 import { load as loadEnv } from 'dotenv';
@@ -58,13 +59,19 @@ init()
     console.log(err);
   });
 
-const mongoUser = process.env.MONGO_USER || 'USER';
-const mongoPw = process.env.MONGO_PW || 'PASSWORD';
-const mongoUri = process.env.MONGO_URI || 'localhost:27017';
-const mongoDbName = process.env.MONGO_DB_NAME || 'DBNAME';
+
+
+
+
+
+
+const MONGO_USER = process.env.MONGO_USER || 'USER';
+const MONGO_PW = process.env.MONGO_PW || 'PASSWORD';
+const MONGO_URI = process.env.MONGO_URI || 'localhost:27017';
+const MONGO_DB_NAME = process.env.MONGO_DB_NAME || 'DBNAME';
 
 mongoose.connect(
-  `mongodb://${mongoUser}:${mongoPw}@${mongoUri}/${mongoDbName}`
+  `mongodb://${MONGO_USER}:${MONGO_PW}@${MONGO_URI}/${MONGO_DB_NAME}`
 );
 
 const db = mongoose.connection;
