@@ -20,7 +20,6 @@ const routes = [
     method: 'POST',
     path: '/Uploader/SingleUpload',
     config: {
-      auth: true,
       tags: ['api'],
       payload: {
         output: 'stream',
@@ -56,7 +55,6 @@ const routes = [
     method: 'POST',
     path: '/Uploader/MultipleUpload',
     config: {
-      auth: true,
       tags: ['api'],
       payload: {
         output: 'stream',
@@ -87,7 +85,6 @@ const routes = [
     method: 'GET',
     path: '/Uploader/images/{id}',
     config: {
-      auth: true,
       tags: ['api']
     },
     handler: async function(request, reply) {
@@ -110,7 +107,6 @@ const routes = [
     method: 'GET',
     path: '/Uploader/images',
     config: {
-      auth: true,
       tags: ['api']
     },
     handler: async function(request, reply) {
