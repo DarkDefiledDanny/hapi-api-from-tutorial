@@ -116,9 +116,9 @@ const routes = [
     handler: async function(request, reply) {
       try {
         const col = await loadCollection(COLLECTION_NAME, db);
-        reply(col.data);
+        return col.data;
       } catch (err) {
-        reply(Boom.badRequest(err.message, err));
+        return Boom.badRequest(err.message, err);
       }
     }
   }
