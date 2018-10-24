@@ -59,12 +59,6 @@ init()
     console.log(err);
   });
 
-
-
-
-
-
-
 const MONGO_USER = process.env.MONGO_USER || 'USER';
 const MONGO_PW = process.env.MONGO_PW || 'PASSWORD';
 const MONGO_URI = process.env.MONGO_URI || 'localhost:27017';
