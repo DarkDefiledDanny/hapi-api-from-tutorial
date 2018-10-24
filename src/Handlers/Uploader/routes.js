@@ -105,6 +105,22 @@ const routes = [
         return Boom.badRequest(err.message, err);
       }
     }
+  },
+  {
+    method: 'GET',
+    path: '/Uploader/images',
+    config: {
+      auth: false,
+      tags: ['api']
+    },
+    handler: async function(request, reply) {
+      try {
+        const col = await loadCollection(COLLECTION_NAME, db);
+        reply(col.data);
+      } catch (err) {
+        reply(Boom.badRequest(err.message, err));
+      }
+    }
   }
 ];
 

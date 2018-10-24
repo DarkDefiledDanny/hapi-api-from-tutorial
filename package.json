@@ -8,7 +8,6 @@
     "flow": "flow",
     "prettier": "prettier --single-quote --write \"src/**/*.js\"",
     "test": "mocha ./src/**/*.spec.js --require babel-register --require babel-polyfill",
-    "precommit": "lint-staged",
     "build": "babel src --out-dir dist --ignore spec.js",
     "start": "npm run build && node ./dist/index.js"
   },
@@ -65,5 +64,10 @@
     "shortid": "^2.2.13",
     "uuid": "^3.3.2",
     "vision": "^5.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
