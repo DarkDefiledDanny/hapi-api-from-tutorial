@@ -9,7 +9,7 @@ const swaggerOptions = {
   schemes: ['http'],
   host: 'localhost:3000',
   info: {
-    title: 'Test API Documentation',
+    title: 'Baiv API Documentation',
     version: '1.0.0'
   }
 };
