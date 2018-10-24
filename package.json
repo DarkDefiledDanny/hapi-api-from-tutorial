@@ -12,6 +12,12 @@
     "build": "babel src --out-dir dist --ignore spec.js",
     "start": "npm run build && node ./dist/index.js"
   },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -47,8 +53,10 @@
     "hapi-auth-bearer-token": "^6.1.0",
     "hapi-auth-jwt2": "^8.1.0",
     "hapi-swagger": "^9.1.2",
+    "husky": "^1.1.2",
     "inert": "^5.1.0",
     "jsonwebtoken": "^8.3.0",
+    "lint-staged": "^7.3.0",
     "lokijs": "^1.5.5",
     "mongodb": "^3.1.8",
     "mongoose": "^5.3.4",
