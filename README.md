@@ -9,7 +9,7 @@ hapi api project made with tutorial
 
 5. start the server. e.g node index.js 
 
-6. head to http://<yourserverpath>:<port>/documentation to see current API calls.
+6. head to http://"<yourserverpath>":"<port>"/documentation to see current API calls.
 
 
 7. Enjoy 
