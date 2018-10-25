@@ -32,30 +32,6 @@ const port = process.env.PORT || 3000;
 
 const server = new Hapi.server({ port });
 
-/*
-server.route({
-    method: "POST",
-    path: "/Upload/upload",
-    config: {
-      auth: false,
-      tags: ['api'],
-        payload: {
-            output: "stream",
-            parse: true,
-            allow: "multipart/form-data",
-            maxBytes: 2 * 10000 * 10000
-        }
-    },
-    handler: (request, response) => {
-        var result = [];
-        for(var i = 0; i < request.payload["file"].length; i++) {
-            result.push(request.payload["file"][i].hapi);
-            request.payload["file"][i].pipe(fs.createWriteStream(__dirname + "/uploads/" + request.payload["file"][i].hapi.filename))
-        }
-        return result;
-    }
-});
-*/
 server.route(routes);
 
 const validate = async function(decoded, request) {
