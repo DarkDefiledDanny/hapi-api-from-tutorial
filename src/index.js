@@ -12,6 +12,11 @@ import jwt from 'jsonwebtoken';
 import { Auth } from './Models';
 import { getKey } from './Services';
 
+import http from 'http';
+setInterval(function() {
+  http.get('http://defiled-api.herokuapp.com');
+}, 300000); // every 5 minutes (300000)
+
 consoleTime(console, {
   pattern: 'dd/mm/yyyy HH:MM:ss.l',
   colors: {
