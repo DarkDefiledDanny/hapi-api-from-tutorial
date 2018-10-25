@@ -31,10 +31,10 @@ export async function VerifyEmail(to: string, key: string) {
   const statusCode = sentEmail.statusCode;
   if (statusCode >= 200 && statusCode < 300) {
     console.log('Email successvol verzonden!', sentEmail.toJSON());
-    return 'Check uw Inbox voor een Verificatie email!';
+    //return 'Check uw Inbox voor een Verificatie email!';
   } else {
     console.warn('Email heeft problemen!', sentEmail.toJSON());
-    return 'Er is een fout opgetreden neem contact op met de beheerder';
+    //return 'Er is een fout opgetreden neem contact op met de beheerder';
   }
 
   return sentEmail;
